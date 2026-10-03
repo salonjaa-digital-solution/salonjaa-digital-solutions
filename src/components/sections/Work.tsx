@@ -6,7 +6,7 @@ import { work } from "@/content/work";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { getLenisInstance } from "@/lib/lenisInstance";
-import { WorkMockup } from "./WorkMockup";
+import { WorkScreenshot } from "./WorkScreenshot";
 
 const PANEL_COUNT = work.projects.length;
 
@@ -134,7 +134,7 @@ export function Work() {
         </div>
 
         <div ref={trackRef} className="flex flex-col gap-14 pt-6 lg:h-full lg:flex-row lg:flex-nowrap lg:gap-0 lg:pt-0">
-          {work.projects.map((project, i) => (
+          {work.projects.map((project) => (
             <article
               key={project.name}
               className="w-full shrink-0 lg:flex lg:h-full lg:w-screen lg:items-center lg:pb-16 lg:pt-20"
@@ -169,7 +169,12 @@ export function Work() {
                     <p className="mt-6 text-xs text-text-muted">Live link coming soon</p>
                   )}
                 </div>
-                <WorkMockup variant={i} />
+                <WorkScreenshot
+                  src={project.image}
+                  alt={project.imageAlt}
+                  width={project.imageWidth}
+                  height={project.imageHeight}
+                />
               </div>
             </article>
           ))}

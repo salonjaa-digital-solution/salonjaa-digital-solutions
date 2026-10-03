@@ -3,13 +3,17 @@ import { navLinks } from "@/content/nav";
 import { site, team } from "@/content/site";
 import { contact } from "@/content/contact";
 import { withWhatsappMessage } from "@/lib/whatsapp";
+import { sectionHref } from "@/lib/nav";
+import { servicePages } from "@/content/seo";
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/icons/SocialIcons";
 
 // "Careers", "Blog", "Privacy Policy", and "Terms of Use" are placeholder
 // links only — none of these pages exist yet. Build them and swap in real
 // hrefs before launch (see the placeholder checklist in README.md).
+// The footer is a server component with no pathname, so in-page links are
+// always written as "/#section" — they resolve correctly from every route.
 const companyLinks = [
-  { label: "About Us", href: "#about" },
+  { label: "About Us", href: "/#about" },
   { label: "Careers", href: null },
   { label: "Blog", href: null },
   { label: "Privacy Policy", href: null },
@@ -65,8 +69,18 @@ export function Footer() {
           <ul className="space-y-2.5 text-sm text-text-secondary">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} data-cursor-hover className="hover:text-white">
+                <a href={sectionHref(link.href, null)} data-cursor-hover className="hover:text-white">
                   {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mb-4 mt-8 text-sm font-semibold uppercase tracking-wide text-text-muted">Services</h3>
+          <ul className="space-y-2.5 text-sm text-text-secondary">
+            {servicePages.map((page) => (
+              <li key={page.slug}>
+                <a href={`/${page.slug}`} data-cursor-hover className="hover:text-white">
+                  {page.name}
                 </a>
               </li>
             ))}

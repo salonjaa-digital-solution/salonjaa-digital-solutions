@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { services } from "@/content/services";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -29,6 +30,15 @@ export function Services() {
                     </span>
                   ))}
                 </div>
+                {pillar.href && (
+                  <Link
+                    href={pillar.href}
+                    data-cursor-hover
+                    className="mt-5 text-sm font-medium text-cyan transition-colors hover:text-white"
+                  >
+                    Learn more →
+                  </Link>
+                )}
               </GlassCard>
             </SectionRevealItem>
           ))}

@@ -2,16 +2,19 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BrandMark } from "./BrandMark";
 import { MobileMenu } from "./MobileMenu";
 import { AccountNavLink } from "./AccountNavLink";
 import { navLinks } from "@/content/nav";
 import { site } from "@/content/site";
 import { GradientButton } from "@/components/ui/GradientButton";
+import { sectionHref } from "@/lib/nav";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     function onScroll() {
@@ -26,7 +29,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40">
       <nav data-scrolled={scrolled} className="glass-nav">
         <div className="container-app flex items-center justify-between py-3">
-          <Link href="#top" data-cursor-hover className="flex items-center gap-2.5">
+          <Link href={pathname === "/" ? "#top" : "/"} data-cursor-hover className="flex items-center gap-2.5">
             <BrandMark size={34} priority />
             <span className="leading-tight">
               <span className="block font-display text-lg font-bold text-white">{site.shortName}</span>
@@ -40,7 +43,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={sectionHref(link.href, pathname)}
                 data-cursor-hover
                 className="text-sm font-medium text-text-secondary transition-colors hover:text-white"
               >
@@ -51,7 +54,7 @@ export function Navbar() {
 
           <div className="hidden items-center gap-5 md:flex">
             <AccountNavLink className="text-sm font-medium text-text-secondary transition-colors hover:text-white" />
-            <GradientButton href="#contact" size="md">
+            <GradientButton href={sectionHref("#contact", pathname)} size="md">
               Book A Free Call
             </GradientButton>
           </div>

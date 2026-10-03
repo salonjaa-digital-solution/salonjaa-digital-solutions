@@ -11,17 +11,23 @@ export const work = {
       outcome: "Consultation bookings now flow directly through WhatsApp, call, and the site itself.",
       stack: ["HTML5", "CSS3", "JavaScript", "SEO"],
       link: "https://rajeswaripatra.in",
+      image: "/images/work/rajeswari-patra.png",
+      imageAlt: "Homepage of Dr. G. Rajeswari Patra's homoeopathic practice website",
+      imageWidth: 1280,
+      imageHeight: 800,
     },
     {
-      name: "GIET E-YUVA Centre",
-      category: "Institutional Website",
+      name: "Ridhi Sidhi",
+      category: "Menswear Retail Website",
       description:
-        "Official website for the BIRAC E-YUVA Center at GIET University, covering its programs, projects, events, publications, and innovation initiatives.",
-      outcome: "A single, structured home for a multi-program institutional center.",
-      stack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-      // TODO: replace with the production URL once it's live — a Vercel preview
-      // was referenced on the previous site but never captured verbatim.
-      link: "#",
+        "An online showcase for a premium menswear showroom in Sambalpur, Odisha — shoppers browse 11 product categories with imagery, see the multi-brand range, and find the store hours and location.",
+      outcome: "Customers can enquire about products and book a personal styling consultation directly over WhatsApp.",
+      stack: ["Responsive Design", "WebP Images", "WhatsApp Integration"],
+      link: "https://ridhisidhigarments.shop",
+      image: "/images/work/ridhi-sidhi.png",
+      imageAlt: "Homepage of the Ridhi Sidhi menswear showroom website",
+      imageWidth: 1280,
+      imageHeight: 800,
     },
     {
       name: "Kumar Prasannajit",
@@ -31,6 +37,10 @@ export const work = {
       outcome: "A distinctive, code-forward personal brand that stands out from template portfolios.",
       stack: ["Next.js", "React", "Node.js", "Python"],
       link: "https://kumarp.in",
+      image: "/images/work/kumar-portfolio.png",
+      imageAlt: "Hero section of Kumar Prasannajit Sahu's developer portfolio",
+      imageWidth: 960,
+      imageHeight: 800,
     },
   ],
 };

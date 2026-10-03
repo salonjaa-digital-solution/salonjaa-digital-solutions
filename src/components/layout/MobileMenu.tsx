@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "@/lib/gsap";
 import { navLinks } from "@/content/nav";
+import { sectionHref } from "@/lib/nav";
 import { GradientButton } from "@/components/ui/GradientButton";
 import { AccountNavLink } from "./AccountNavLink";
 
@@ -13,6 +15,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   const panelRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const panel = panelRef.current;
@@ -32,7 +35,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       {navLinks.map((link) => (
         <a
           key={link.href}
-          href={link.href}
+          href={sectionHref(link.href, pathname)}
           onClick={onClose}
           data-cursor-hover
           className="rounded-lg px-3 py-2.5 font-medium text-text-secondary transition-colors hover:bg-white/5 hover:text-white"
@@ -45,7 +48,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         className="rounded-lg px-3 py-2.5 font-medium text-text-secondary transition-colors hover:bg-white/5 hover:text-white"
       />
       <div className="mt-2">
-        <GradientButton href="#contact" onClick={onClose} className="w-full">
+        <GradientButton href={sectionHref("#contact", pathname)} onClick={onClose} className="w-full">
           Book A Free Call
         </GradientButton>
       </div>

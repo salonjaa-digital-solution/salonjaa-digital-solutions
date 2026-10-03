@@ -19,22 +19,37 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  applicationName: site.name,
   title: {
-    default: `${site.name} — Website Design & Development`,
+    default: `${site.name} — Web Development & SEO in Bhubaneswar, Odisha`,
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  authors: [{ name: "Kumar Prasannajit Sahu" }, { name: "Saroj Kumar Sahu" }],
+  creator: site.name,
+  publisher: site.name,
+  formatDetection: { telephone: true, email: true, address: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
   openGraph: {
     type: "website",
-    title: `${site.name} — Website Design & Development`,
+    title: `${site.name} — Web Development & SEO in Bhubaneswar, Odisha`,
     description: site.ogDescription,
     siteName: site.name,
+    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Website Design & Development`,
+    title: `${site.name} — Web Development & SEO in Bhubaneswar, Odisha`,
     description: site.ogDescription,
   },
+  // Set GOOGLE_SITE_VERIFICATION to the token from Google Search Console to verify ownership.
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
   // Favicon is picked up automatically from src/app/icon.png (Next.js file convention).
 };
 
@@ -44,7 +59,7 @@ export const metadata: Metadata = {
 // under (portal) and (admin) want none of it.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
         <a
           href="#top"

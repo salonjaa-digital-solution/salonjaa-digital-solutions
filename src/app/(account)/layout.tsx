@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+
+// Private client account area — keep it out of search results.
+export const metadata: Metadata = { robots: { index: false, follow: false } };
+
 // Bare pass-through — src/app/(account)/account/layout.tsx (PortalShell)
 // owns all the real chrome now (sidebar, topbar), same split as (admin).
 export default function AccountGroupLayout({ children }: { children: React.ReactNode }) {

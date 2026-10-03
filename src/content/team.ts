@@ -1,7 +1,7 @@
 import { team as teamMembers } from "./site";
 
 export const team = {
-  eyebrow: "Meet the duo",
-  title: "The two people you'll actually work with",
+  eyebrow: "Meet the team",
+  title: "The people behind every project",
   members: [teamMembers.kumar, teamMembers.saroj],
 };

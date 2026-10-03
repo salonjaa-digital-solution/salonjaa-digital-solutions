@@ -5,7 +5,7 @@ export const hero = {
     line2: "Actually Convert.",
   },
   lede:
-    "Salonjaa Digital Solutions is a two-person web, app, and digital marketing studio in Bhubaneswar — one partner builds your product from scratch, the other markets it. Design, development, domains, hosting, and SEO, all handled directly by us.",
+    "Salonjaa Digital Solutions is a web, app, and digital marketing studio in Bhubaneswar — our developers build your product from scratch, and our marketing team takes it to customers. Design, development, domains, hosting, and SEO, all handled by one team.",
   ctaPrimary: { label: "Start Your Project", href: "#contact" },
   ctaSecondary: { label: "See our work ↓", href: "#work" },
   badges: [

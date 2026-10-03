@@ -8,11 +8,11 @@ export const site = {
   name: "Salonjaa Digital Solutions",
   shortName: "Salonjaa",
   tagline: "We design. We market. You thrive.",
-  url: "https://www.salonjaa.com",
+  url: "https://salonjaa.com",
   description:
-    "Salonjaa Digital Solutions is a two-person freelance studio in Bhubaneswar building custom, responsive websites, e-commerce & business portals, SEO, and domain & hosting management — one developer, one marketer, no hand-offs.",
+    "Salonjaa Digital Solutions is a web, app, and digital marketing studio in Bhubaneswar building custom, responsive websites, e-commerce & business portals, SEO, and domain & hosting management — one team from first design to launch.",
   ogDescription:
-    "Custom websites, e-commerce portals, SEO and domain/hosting management from a two-person freelance studio in Bhubaneswar, India.",
+    "Custom websites, e-commerce portals, SEO and domain/hosting management from a digital studio in Bhubaneswar, India.",
   address: {
     line1: "Lane-5, Satya Sai Enclave, Khandagiri",
     line2: "Bhubaneswar, Odisha, India",

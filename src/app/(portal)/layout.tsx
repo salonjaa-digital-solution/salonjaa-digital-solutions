@@ -1,5 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { BrandMark } from "@/components/layout/BrandMark";
+
+// Private client area — keep it out of search results.
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 // Bare wrapper for /login and /account/* — no marketing chrome (Navbar,
 // Footer, custom cursor, Lenis smooth-scroll). Just enough shell that the
