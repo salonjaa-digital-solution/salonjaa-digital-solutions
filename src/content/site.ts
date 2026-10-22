@@ -13,11 +13,15 @@ export const site = {
     "Salonjaa Digital Solutions is a web, app, and digital marketing studio in Bhubaneswar building custom, responsive websites, e-commerce & business portals, SEO, and domain & hosting management — one team from first design to launch.",
   ogDescription:
     "Custom websites, e-commerce portals, SEO and domain/hosting management from a digital studio in Bhubaneswar, India.",
+  // Keep in sync with the Google Business Profile (name, address, phone must match).
   address: {
-    line1: "Lane-5, Satya Sai Enclave, Khandagiri",
+    line1: "Lane-5, Satya Sai Enclave, Kolathia, Khandagiri",
     line2: "Bhubaneswar, Odisha, India",
-    full: "Lane-5, Satya Sai Enclave, Khandagiri, Bhubaneswar, Odisha, India",
+    postalCode: "751030",
+    full: "Lane-5, Satya Sai Enclave, Kolathia, Khandagiri, Bhubaneswar, Odisha 751030, India",
   },
+  geo: { latitude: 20.2573753, longitude: 85.7776686 },
+  mapsUrl: "https://maps.google.com/?cid=5757413415568329784",
 } as const;
 
 export const team = {

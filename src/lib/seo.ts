@@ -41,8 +41,11 @@ export function organizationSchema() {
       streetAddress: site.address.line1,
       addressLocality: "Bhubaneswar",
       addressRegion: "Odisha",
+      postalCode: site.address.postalCode,
       addressCountry: "IN",
     },
+    geo: { "@type": "GeoCoordinates", ...site.geo },
+    hasMap: site.mapsUrl,
     areaServed: [
       { "@type": "City", name: "Bhubaneswar" },
       { "@type": "State", name: "Odisha" },
@@ -61,7 +64,7 @@ export function organizationSchema() {
         jobTitle: team.saroj.role,
       },
     ],
-    sameAs: [team.kumar.github, team.kumar.linkedin],
+    sameAs: [site.mapsUrl, team.kumar.github, team.kumar.linkedin],
   };
 }
 
@@ -72,6 +75,8 @@ export function websiteSchema() {
     "@id": `${site.url}/#website`,
     url: site.url,
     name: site.name,
+    // Google's site-name system reads name/alternateName from this node on the homepage.
+    alternateName: site.shortName,
     inLanguage: "en-IN",
     publisher: { "@id": orgId },
   };
