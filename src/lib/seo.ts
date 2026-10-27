@@ -76,7 +76,7 @@ export function websiteSchema() {
     url: site.url,
     name: site.name,
     // Google's site-name system reads name/alternateName from this node on the homepage.
-    alternateName: site.shortName,
+    alternateName: [site.shortName, "salonjaa.com"],
     inLanguage: "en-IN",
     publisher: { "@id": orgId },
   };

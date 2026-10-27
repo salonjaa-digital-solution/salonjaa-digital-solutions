@@ -6,9 +6,11 @@
  */
 
 export const homeSeo = {
-  title: "Web Development & SEO in Bhubaneswar, Odisha | Salonjaa",
+  // Full brand name first: "Salonjaa" is an unfamiliar word that Google tends to
+  // spell-correct to "Sanjana", so the exact phrase must lead the homepage title.
+  title: "Salonjaa Digital Solutions | Web Development & SEO, Bhubaneswar",
   description:
-    "Custom websites, e-commerce & booking portals, apps and SEO from a digital studio in Bhubaneswar, Odisha. Domain and hosting handled by us, with WhatsApp support.",
+    "Salonjaa Digital Solutions builds custom websites, e-commerce & booking portals, apps and SEO for businesses in Bhubaneswar, Odisha. Hosting and support included.",
 };
 
 export type ServicePage = {
