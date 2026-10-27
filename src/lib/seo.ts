@@ -64,7 +64,14 @@ export function organizationSchema() {
         jobTitle: team.saroj.role,
       },
     ],
-    sameAs: [site.mapsUrl, team.kumar.github, team.kumar.linkedin],
+    sameAs: [
+      site.mapsUrl,
+      site.social.googleEntity,
+      site.social.facebook,
+      site.social.instagram,
+      team.kumar.github,
+      team.kumar.linkedin,
+    ],
   };
 }
 

@@ -22,6 +22,14 @@ export const site = {
   },
   geo: { latitude: 20.2573753, longitude: 85.7776686 },
   mapsUrl: "https://maps.google.com/?cid=5757413415568329784",
+  // Business profiles — listed in the footer and in the Organization schema's
+  // sameAs so Google ties them to the same entity as this site.
+  social: {
+    facebook: "https://www.facebook.com/profile.php?id=61594457728150",
+    instagram: "https://www.instagram.com/salonjaadegital/",
+    // Google Knowledge Graph entity for the Business Profile.
+    googleEntity: "https://www.google.com/search?kgmid=/g/11zypmvql6",
+  },
 } as const;
 
 export const team = {

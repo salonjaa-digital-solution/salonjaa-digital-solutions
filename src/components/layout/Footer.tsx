@@ -5,7 +5,13 @@ import { contact } from "@/content/contact";
 import { withWhatsappMessage } from "@/lib/whatsapp";
 import { sectionHref } from "@/lib/nav";
 import { servicePages } from "@/content/seo";
-import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/icons/SocialIcons";
+import {
+  FacebookIcon,
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  WhatsappIcon,
+} from "@/components/icons/SocialIcons";
 
 // "Careers", "Blog", "Privacy Policy", and "Terms of Use" are placeholder
 // links only — none of these pages exist yet. Build them and swap in real
@@ -60,6 +66,26 @@ export function Footer() {
               className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-text-secondary transition-colors hover:border-cyan/50 hover:text-white"
             >
               <WhatsappIcon />
+            </a>
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor-hover
+              aria-label="Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-text-secondary transition-colors hover:border-cyan/50 hover:text-white"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor-hover
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-text-secondary transition-colors hover:border-cyan/50 hover:text-white"
+            >
+              <InstagramIcon />
             </a>
           </div>
         </div>
